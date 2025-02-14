@@ -73,7 +73,14 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' && playerCar.x < canvas.width - carWidth) {
         playerCar.x += laneWidth;
     }
+    if (e.key === 'ArrowUp') {
+        playerCar.y -= laneWidth; // Move forward
+    }
+    if (e.key === 'ArrowDown' && playerCar.y < originalPositionY) {
+        playerCar.y += laneWidth; // Move backward till original position
+    }
 });
+
 
 // Game loop
 function gameLoop() {
