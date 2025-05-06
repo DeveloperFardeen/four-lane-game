@@ -65,6 +65,8 @@ function drawEnemyCars() {
     });
 }
 
+const originalPositionY = canvas.height - carHeight - 10
+
 // Handle movement
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' && playerCar.x > 0) {
